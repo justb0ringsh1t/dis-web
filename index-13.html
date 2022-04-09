@@ -5,29 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style-standar.css" />
+    <link rel="stylesheet" href="css/style-13.css" />
     <title>Ejercicio 13</title>
   </head>
   <body>
     <form>
-      <!-- PAGO -->
+      <!-- NOMBRE ASIGNATURA -->
       <label for="nombre" class="titulo"
         >Ingrese el nombre de la asignatura:
       </label>
       <input type="text" id="nombre" />
-      <!-- TARJETA -->
-      <label for="tarjeta" class="titulo">Tarjeta:</label>
-      <input type="checkbox" id="tarjeta" checked="true" /><br />
-      <!-- METODO TARJETA -->
-      <div id="containerMetodoTarjeta">
-        <label for="metodoTarjeta" class="titulo"></label>
-        <select id="metodoTarjeta">
-          <option value="debito">Debito</option>
-          <option value="credito">Credito</option>
-        </select>
-      </div>
+      <!-- NOTA ORAL -->
+      <label for="oral" class="titulo">Ingrese la nota de oral:</label>
+      <input type="number" id="oral" min="0" max="12" />
+      <!-- NOTA PRACTICO -->
+      <label for="practico" class="titulo">Ingrese la nota de practico:</label>
+      <input type="number" id="practico" min="0" max="12" />
+      <!-- NOTA ESCRITO -->
+      <label for="escrito" class="titulo">Ingrese la nota de escrito:</label>
+      <input type="number" id="escrito" min="0" max="12" />
       <!-- BOTON -->
       <input type="button" value="Calcular" id="btn-calcular" />
     </form>
+
+    <div id="resultados">
+      <p id="exonerado"></p>
+      <p id="diciembre"></p>
+      <p id="febrero"></p>
+    </div>
 
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/script-13.js"></script>
