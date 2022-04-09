@@ -1,6 +1,6 @@
 $('document').ready(() => {
   $('#btn-calcular').on('click', () => {
-    const asignatura = $('#asignatura').val()
+    const asignatura = $('#nombre').val()
     const oral = Number($('#oral').val())
     const practico = Number($('#practico').val())
     const escrito = Number($('#escrito').val())

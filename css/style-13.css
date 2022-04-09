@@ -1,16 +1,34 @@
-#resultados {
-  display: flex;
-  flex-flow: column;
+:root {
+  --color-exonero: rgb(50, 168, 82);
+  --color-diciembre: rgb(235, 171, 54);
+  --color-febrero: rgb(235, 60, 54);
 }
 
-#exonerado {
-  background-color: green;
+#resultados {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+p {
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+#exonero {
+  background-color: var(--color-exonero);
 }
 
 #diciembre {
-  background-color: yellow;
+  background-color: var(--color-diciembre);
 }
 
 #febrero {
-  background-color: red;
+  background-color: var(--color-febrero);
+}
+
+@media (max-width: 810px) {
+  #resultados {
+    flex-flow: column;
+  }
 }
