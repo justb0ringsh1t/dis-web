@@ -6,8 +6,10 @@
 
 #resultados {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 4rem;
+  justify-content: center;
 }
 
 p {
@@ -25,10 +27,4 @@ p {
 
 #febrero {
   background-color: var(--color-febrero);
-}
-
-@media (max-width: 810px) {
-  #resultados {
-    flex-flow: column;
-  }
 }
