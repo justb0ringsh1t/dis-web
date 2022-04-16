@@ -1,3 +1,3 @@
 # ejercicios-utu
 
-Todos los ejercicios del profe je
+.input-container>label[for="input1"].input-titulo{Label del input}+input:text#input1+span.input-focus
