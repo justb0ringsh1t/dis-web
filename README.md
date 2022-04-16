@@ -8,3 +8,6 @@ Crear check:
 
 Crear select:
 .input-container>label[for="select1"].input-titulo{Label del select:}>select#select1>option\*3
+
+Crear form:
+.container>(.ejercicio>h1{Ejercicio ?})+form
