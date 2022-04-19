@@ -4,32 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style-standard.css" />
-    <link rel="stylesheet" href="css/style-17.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Ejercicio 17</title>
   </head>
   <body>
-    <form>
-      <!-- PAGO -->
-      <label for="pago" class="titulo">Ingrese su pago:</label>
-      <input type="number" id="pago" min="0" />
-      <!-- TARJETA -->
-      <label for="tarjeta" class="titulo">Tarjeta:</label>
-      <input type="checkbox" id="tarjeta" checked="true" /><br />
-      <!-- METODO TARJETA -->
-      <div id="containerMetodoTarjeta">
-        <label for="metodoTarjeta" class="titulo"></label>
-        <select id="metodoTarjeta">
-          <option value="debito">Debito</option>
-          <option value="credito">Credito</option>
-        </select>
+    <main>
+      <div class="container">
+        <form class="form">
+          <h1 class="form__title">Ejercicio 17</h1>
+          <!-- PAGO -->
+          <div class="input__container">
+            <label for="pago" class="input__title">Ingrese su pago:</label>
+            <input type="number" id="pago" min="0" class="input" />
+          </div>
+          <!-- TARJETA -->
+          <div class="input__container input__container--checkbox">
+            <input
+              type="checkbox"
+              id="tarjeta"
+              checked="true"
+              class="input input--checkbox"
+            />
+            <label for="tarjeta" class="input__label">Tarjeta</label>
+          </div>
+          <!-- METODO TARJETA -->
+          <div class="input__container" id="metodoTarjetaContainer">
+            <label for="metodoTarjeta" class="input__label">
+              Select generico:
+            </label>
+            <select id="metodoTarjeta" class="input input--select">
+              <option value="credito">Credito</option>
+              <option value="debito">Debito</option>
+            </select>
+          </div>
+          <!-- BOTON -->
+          <button type="button" id="btn-calcular" class="button">
+            Calcular
+          </button>
+        </form>
+        <p id="resultado" class="resultado"></p>
       </div>
-      <!-- BOTON -->
-      <input type="button" value="Calcular" id="btn-calcular" />
-    </form>
-
-    <p id="resultado"></p>
-
+    </main>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/script-17.js"></script>
   </body>

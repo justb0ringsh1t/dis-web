@@ -1,17 +1,16 @@
 $('document').ready(() => {
-  $('#btnmostrar').on('click', () => {
+  $('#btn-calcular').on('click', () => {
     const inputMillas = $('#millas')
-    inputMillas.removeClass('error')
+    inputMillas.removeClass('input--error')
 
-    if (inputMillas.val() === '') {
-      inputMillas.addClass('error')
+    if (inputMillas.val() == '') {
+      inputMillas.addClass('input--error')
       inputMillas.focus()
-      inputMillas.html('')
       return
     }
 
-    const planPlus = $('#planSi')[0].checked
-    const millas = planPlus
+    const plus = $('#plus')[0].checked
+    const millas = plus
       ? Number(inputMillas.val()) * 2
       : Number(inputMillas.val())
     const plan =

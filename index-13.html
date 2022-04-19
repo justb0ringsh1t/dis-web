@@ -4,36 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style-standard.css" />
-    <link rel="stylesheet" href="css/style-13.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Ejercicio 13</title>
   </head>
   <body>
-    <form>
-      <!-- NOMBRE ASIGNATURA -->
-      <label for="nombre" class="titulo"
-        >Ingrese el nombre de la asignatura:
-      </label>
-      <input type="text" id="nombre" />
-      <!-- NOTA ORAL -->
-      <label for="oral" class="titulo">Ingrese la nota de oral:</label>
-      <input type="number" id="oral" min="0" max="12" />
-      <!-- NOTA PRACTICO -->
-      <label for="practico" class="titulo">Ingrese la nota de practico:</label>
-      <input type="number" id="practico" min="0" max="12" />
-      <!-- NOTA ESCRITO -->
-      <label for="escrito" class="titulo">Ingrese la nota de escrito:</label>
-      <input type="number" id="escrito" min="0" max="12" />
-      <!-- BOTON -->
-      <input type="button" value="Calcular" id="btn-calcular" />
-    </form>
+    <main>
+      <form class="form">
+        <h1 class="form__title">Ejercicio 13</h1>
+        <!-- NOMBRE ASIGNATURA -->
+        <div class="input__container">
+          <label for="nombre" class="input__label">
+            Ingrese el nombre de la asignatura:
+          </label>
+          <input type="text" id="nombre" class="input" />
+        </div>
+        <!-- NOTA ORAL -->
+        <div class="input__container">
+          <label for="oral" class="input__label">
+            Ingrese la nota de oral:
+          </label>
+          <input type="number" id="oral" min="0" max="12" class="input" />
+        </div>
+        <!-- NOTA PRACTICO -->
+        <div class="input__container">
+          <label for="practico" class="input__label">
+            Ingrese la nota de practico:
+          </label>
+          <input type="number" id="practico" min="0" max="12" class="input" />
+        </div>
+        <!-- NOTA ESCRITO -->
+        <div class="input__container">
+          <label for="escrito" class="input__label">
+            Ingrese la nota de escrito:
+          </label>
+          <input type="number" id="escrito" min="0" max="12" class="input" />
+        </div>
+        <!-- BOTON -->
+        <button type="button" id="btn-calcular" class="button">Calcular</button>
+      </form>
 
-    <div id="resultados">
-      <p id="exonero"></p>
-      <p id="diciembre"></p>
-      <p id="febrero"></p>
-    </div>
-
+      <div id="resultados">
+        <p id="exonero"></p>
+        <p id="diciembre"></p>
+        <p id="febrero"></p>
+      </div>
+    </main>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/script-13.js"></script>
   </body>

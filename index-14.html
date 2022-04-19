@@ -4,28 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style-standard.css" />
-    <link rel="stylesheet" href="css/style-14.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Ejercicio 14</title>
   </head>
   <body>
     <main>
-      <form>
-        <label for="millas" class="titulo"
-          >Ingrese las millas acumuladas:
-        </label>
-        <input type="text" id="millas" placeholder="Ej: 1300..." />
-        <fieldset>
-          <legend class="titulo">Pertence al plan plus?</legend>
-          <input type="radio" name="planPlus" id="planSi" value="Si" />
-          <label for="planSi">Si</label>
-          <input type="radio" name="planPlus" id="planNo" value="No" />
-          <label for="planNo">No</label>
-        </fieldset>
-        <input type="button" value="Mostrar Viajes" id="btnmostrar" />
-      </form>
-      <div>
-        <p id="resultado"></p>
+      <div class="container">
+        <form class="form" id="form">
+          <h1 class="form__title">Ejercicio 14</h1>
+          <!-- MILLAS -->
+          <div class="input__container">
+            <label for="millas" class="input__label">
+              Ingrese sus millas:
+            </label>
+            <input type="number" id="millas" class="input" min="0" />
+          </div>
+          <!-- PLAN PLUS -->
+          <div class="input__container input__container--checkbox">
+            <input type="checkbox" id="plus" class="input input--checkbox" />
+            <label for="plus" class="input__label">
+              Pertenece al plan plus?
+            </label>
+          </div>
+          <!-- BOTON -->
+          <button class="button" type="button" id="btn-calcular">
+            Aceptar
+          </button>
+        </form>
+        <p id="resultado" class="resultado"></p>
       </div>
     </main>
     <script src="js/jquery-3.6.0.min.js"></script>
