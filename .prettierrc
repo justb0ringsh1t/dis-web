@@ -1,4 +1,5 @@
 {
+  "prettier.useEditorConfig": true,
   "arrowParens": "avoid",
   "bracketSpacing": true,
   "endOfLine": "lf",
