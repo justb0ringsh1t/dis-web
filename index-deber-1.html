@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+
+    <title>Deber 1</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <form class="form">
+          <h1 class="form__title">Deber 1</h1>
+          <!-- Mes -->
+          <div class="input__container">
+            <label for="mes" class="input__label">
+              Seleccione el mes del año (en número):
+            </label>
+            <select id="mes" class="input input--select">
+              <option value="Enero">Enero</option>
+              <option value="Febrero">Febrero</option>
+              <option value="Marzo">Marzo</option>
+              <option value="Abril">Abril</option>
+              <option value="Mayo">Mayo</option>
+              <option value="Junio">Junio</option>
+              <option value="Julio">Julio</option>
+              <option value="Agosto">Agosto</option>
+              <option value="Septiembre">Septiembre</option>
+              <option value="Octubre">Octubre</option>
+              <option value="Noviembre">Noviembre</option>
+              <option value="Diciembre">Diciembre</option>
+            </select>
+          </div>
+          <!-- Primer dia -->
+          <div class="input__container">
+            <label for="" class="input__label">
+              Seleccione el primer dia del mes:
+            </label>
+            <select id="primerDia" class="input input--select">
+              <option value="Lunes">Lunes</option>
+              <option value="Martes">Martes</option>
+              <option value="Miercoles">Miercoles</option>
+              <option value="Jueves">Jueves</option>
+              <option value="Viernes">Viernes</option>
+              <option value="Sabado">Sabado</option>
+              <option value="Domingo">Domingo</option>
+            </select>
+          </div>
+          <!-- Boton -->
+          <button class="button" type="button" id="boton">Aceptar</button>
+        </form>
+      </div>
+
+      <br />
+      <hr />
+      <br />
+
+      <table id="calendario" border="1"> </table>
+    </main>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script2.js"></script>
+  </body>
+</html>
