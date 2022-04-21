@@ -1,13 +1,3 @@
-$(() => {
-  $('#boton').on('click', () => {
-    const calendario = $('#calendario')
-    const mes = $('#mes')[0].value
-    const primerDia = $('#primerDia')[0].value
-
-    calendario.html(crearCalendario(mes, primerDia))
-  })
-})
-
 const MESES_CON_31_DIAS = [
   'Enero',
   'Marzo',
@@ -17,6 +7,16 @@ const MESES_CON_31_DIAS = [
   'Octubre',
   'Diciembre',
 ]
+
+$(() => {
+  $('#boton').on('click', () => {
+    const calendario = $('#calendario')
+    const mes = $('#mes')[0].value
+    const primerDia = $('#primerDia')[0].value
+
+    calendario.html(crearCalendario(mes, primerDia))
+  })
+})
 
 function crearCalendario(mes, primerDia) {
   const cantidadDias =
