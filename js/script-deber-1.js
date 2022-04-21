@@ -23,8 +23,6 @@ function crearCalendario(mes, primerDia) {
     mes === 'Febrero' ? 28 : MESES_CON_31_DIAS.includes(mes) ? 31 : 30
   const cabecera = crearCabecera(mes)
 
-  let indicePrimerDia = diaAIndice(primerDia)
-
   let cuerpo = ''
   let diaActual = 1
 
@@ -32,7 +30,7 @@ function crearCalendario(mes, primerDia) {
     let semana = ''
     for (let j = 1; j <= 7; j++) {
       semana +=
-        diaActual > cantidadDias || (i === 1 && j < indicePrimerDia)
+        diaActual > cantidadDias || (i === 1 && j < primerDia)
           ? `<td> ? </td>`
           : `<td> ${diaActual++} </td>`
     }
