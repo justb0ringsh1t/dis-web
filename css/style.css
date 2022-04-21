@@ -1,9 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;900&display=swap');
 
+:root{
+  --main-ff: 'Montserrat', sans-serif;
+
+  --clr-neutral-100: rgb(255, 255, 255);
+  --clr-neutral-200: rgb(218, 218, 218);
+  --clr-neutral-900: rgb(0, 0, 0);
+
+  --clr-main-accent: rgb(255, 68, 109);
+
+  --clr-error: rgb(235, 51, 51);
+  --clr-successful: rgb(124, 201, 93);
+}
+
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #e6e6e6;
-  color: #000000;
+  font-family: var(--main-ff);
+  background-color: var(--clr-neutral-200);
+  color: var(--clr-neutral-900)
 }
 
 .container {
@@ -23,8 +36,8 @@ body {
   padding: 4rem 2rem;
   padding-top: 2rem;
 
-  background-color: #ffff;
-  border: 1px solid #000000;
+  background-color: var(--clr-neutral-100);
+  border: 1px solid var(--clr-neutral-900);
   box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.3);
 
   margin-bottom: 3rem;
@@ -34,7 +47,7 @@ body {
   font-size: 3rem;
   font-weight: 900;
 
-  color: #ff446d;
+  color: var(--clr-main-accent);
 }
 
 /* INPUT */
@@ -59,7 +72,7 @@ body {
 
   padding: 0.25rem;
 
-  border: 1px solid #000000;
+  border: 1px solid var(--clr-neutral-900);
 
   transition: background-color 300ms ease-in-out, box-shadow 300ms ease,
     filter 300ms ease;
@@ -81,14 +94,14 @@ body {
 .input--checkbox {
   margin-left: 0;
   transform: scale(1.2);
-  accent-color: #000000;
+  accent-color: var(--clr-neutral-900)
 }
 
 /* SELECT */
 
 .input--select {
   padding-block: 0.45rem;
-  background-color: white;
+  background-color: var(--clr-neutral-100);
 }
 
 /* BUTTON */
@@ -100,8 +113,8 @@ body {
   padding: 0.35rem 1.35rem;
   margin-top: 0.65rem;
 
-  background-color: #ff446d;
-  color: #ffff;
+  background-color: var(--clr-main-accent);
+  color: var(--clr-neutral-100);
 
   font-weight: 800;
   font-size: 1.5rem;
@@ -112,7 +125,7 @@ body {
 /* RESULTADO */
 
 .resultado {
-  color: #ff446d;
+  color: var(--clr-main-accent);
   font-size: 1.5rem;
   font-weight: 700;
 
@@ -122,13 +135,13 @@ body {
 /* UTILIDADES */
 
 .input--error {
-  border-color: #eb3333;
-  box-shadow: 0px 0px 2px #eb3333;
+  border-color: var(--clr-error);
+  box-shadow: 0px 0px 2px var(--clr-error);
 }
 
 .input--successful {
-  border-color: #7cc95d;
-  box-shadow: 0px 0px 2px #7cc95d;
+  border-color: var(--clr-successful);
+  box-shadow: 0px 0px 2px var(--clr-successful);
 }
 
 .invisible {
