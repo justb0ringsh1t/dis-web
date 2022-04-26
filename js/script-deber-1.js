@@ -31,10 +31,10 @@ function crearCalendario(mes, primerDia) {
     for (let j = 1; j <= 7; j++) {
       semana +=
         diaActual > cantidadDias || (i === 1 && j < primerDia)
-          ? `<td> ? </td>`
-          : `<td> ${diaActual++} </td>`
+          ? `<td class="sin-dia"> ? </td>`
+          : `<td class="dia-mes"> ${diaActual++} </td>`
     }
-    cuerpo += `<tr>${semana}</tr>`
+    cuerpo += `<tr class="dias">${semana}</tr>`
   }
 
   return `
@@ -45,19 +45,19 @@ function crearCalendario(mes, primerDia) {
 
 function crearCabecera(mes) {
   const filaMes = `
-  <tr>
+  <tr class="mes">
     <td colspan="7">${mes} 2022</td>
   <tr>
   `
   const filaDias = `
-  <tr>
-    <td>Lunes</td>
-    <td>Martes</td>
-    <td>Miercoles</td>
-    <td>Jueves</td>
-    <td>Viernes</td>
-    <td>Sabado</td>
-    <td>Domingo</td>
+  <tr class="dias-semana">
+    <td>Lu</td>
+    <td>Ma</td>
+    <td>Mi</td>
+    <td>Ju</td>
+    <td>Vi</td>
+    <td>Sa</td>
+    <td>Do</td>
   </tr>
   `
 
@@ -65,23 +65,4 @@ function crearCabecera(mes) {
     ${filaMes}
     ${filaDias}
   `
-}
-
-function diaAIndice(dia) {
-  switch (dia) {
-    case 'Lunes':
-      return 1
-    case 'Martes':
-      return 2
-    case 'Miercoles':
-      return 3
-    case 'Jueves':
-      return 4
-    case 'Viernes':
-      return 5
-    case 'Sabado':
-      return 6
-    case 'Domingo':
-      return 7
-  }
 }
