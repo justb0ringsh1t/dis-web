@@ -2,12 +2,34 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form {
+  display: flex;
+  flex-flow: column;
+  padding: 3rem;
+  margin: 0 auto;
+}
+
+select {
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 table {
   text-align: center;
   border: 1px solid black;
   border-collapse: collapse;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .dias > td {
