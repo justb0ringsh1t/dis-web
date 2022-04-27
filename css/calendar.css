@@ -10,11 +10,14 @@ body {
 main {
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 form {
+  border: 1px solid black;
   display: flex;
   flex-flow: column;
+  gap: 0.5rem;
   padding: 3rem;
   margin: 0 auto;
 }
@@ -49,8 +52,9 @@ table {
 
 .sin-dia {
   background-color: lightgray;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
-.dia-mes {
+.dia-mes:hover {
+  font-weight: 600;
 }
