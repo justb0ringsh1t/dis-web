@@ -1,3 +1,16 @@
+$(() => {
+  $('#boton').on('click', () => {
+    const calendario = $('#calendario')
+    const mes = $('#mes')[0].value
+    const primerDia = $('#primerDia')[0].value
+
+    const cabecera = crearCabecera(mes)
+    const cuerpo = crearCuerpo(mes, primerDia)
+
+    calendario.html(`${cabecera}${cuerpo}`)
+  })
+})
+
 const MESES_CON_31_DIAS = [
   'Enero',
   'Marzo',
@@ -7,41 +20,6 @@ const MESES_CON_31_DIAS = [
   'Octubre',
   'Diciembre',
 ]
-
-$(() => {
-  $('#boton').on('click', () => {
-    const calendario = $('#calendario')
-    const mes = $('#mes')[0].value
-    const primerDia = $('#primerDia')[0].value
-
-    calendario.html(crearCalendario(mes, primerDia))
-  })
-})
-
-function crearCalendario(mes, primerDia) {
-  const cantidadDias =
-    mes === 'Febrero' ? 28 : MESES_CON_31_DIAS.includes(mes) ? 31 : 30
-  const cabecera = crearCabecera(mes)
-
-  let cuerpo = ''
-  let diaActual = 1
-
-  for (let i = 1; i <= 6; i++) {
-    let semana = ''
-    for (let j = 1; j <= 7; j++) {
-      semana +=
-        diaActual > cantidadDias || (i === 1 && j < primerDia)
-          ? `<td class="sin-dia"> ? </td>`
-          : `<td class="dia-mes"> ${diaActual++} </td>`
-    }
-    cuerpo += `<tr class="dias">${semana}</tr>`
-  }
-
-  return `
-    ${cabecera}
-    ${cuerpo}
-  `
-}
 
 function crearCabecera(mes) {
   const filaMes = `
@@ -65,4 +43,25 @@ function crearCabecera(mes) {
     ${filaMes}
     ${filaDias}
   `
+}
+
+function crearCuerpo(mes, primerDia) {
+  const cantidadDias =
+    mes === 'Febrero' ? 28 : MESES_CON_31_DIAS.includes(mes) ? 31 : 30
+
+  let cuerpo = ''
+  let diaActual = 1
+
+  for (let i = 1; i <= 6; i++) {
+    let semana = ''
+    for (let j = 1; j <= 7; j++) {
+      semana +=
+        diaActual > cantidadDias || (i === 1 && j < primerDia)
+          ? `<td class="sin-dia"> ? </td>`
+          : `<td class="dia-mes"> ${diaActual++} </td>`
+    }
+    cuerpo += `<tr class="dias">${semana}</tr>`
+  }
+
+  return cuerpo
 }
