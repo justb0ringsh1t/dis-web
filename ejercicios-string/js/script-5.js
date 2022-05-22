@@ -1,8 +1,5 @@
 $(function () {
-  const parrafo = $('#resultado')
-
   $('#boton').on('click', function () {
-    const texto = $('#texto').val()
-    parrafo.html(texto.toUpperCase())
+    $('#resultado').html($('#texto').val().toUpperCase())
   })
 })
