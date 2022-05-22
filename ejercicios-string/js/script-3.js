@@ -8,7 +8,7 @@ $(function () {
     let cantidadVocales = 0
 
     for (let i = 0; i < VOCALES.length; i++) {
-      cantidadVocales += vecesLetra(texto, VOCALES[i])
+      cantidadVocales += vecesLetra(texto.toLowerCase(), VOCALES[i])
     }
 
     parrafo.html(
