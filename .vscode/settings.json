@@ -1,0 +1,11 @@
+{
+  "prettier.enable": true,
+  "prettier.semi": true,
+  "prettier.useTabs": false,
+  "prettier.tabWidth": 2,
+  "prettier.arrowParens": "always",
+  "prettier.bracketSpacing": true,
+  "prettier.endOfLine": "auto",
+  "prettier.singleQuote": true,
+  "editor.tabSize": 2
+}
