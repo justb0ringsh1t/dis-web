@@ -53,3 +53,7 @@ form > input + small {
   margin-block: 1rem;
   max-width: 90%;
 }
+
+#resultado > span {
+  color: red;
+}

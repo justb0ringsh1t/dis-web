@@ -4,7 +4,7 @@ $(() => {
 
   $('#boton-mostrar').on('click', () => {
     if ($numero.val().replaceAll(' ', '').length === 0) {
-      $resultado.html(`<span style="color:red">Ingrese algo</span>`);
+      $resultado.html(`<span>Ingrese algo</span>`);
       return;
     }
 

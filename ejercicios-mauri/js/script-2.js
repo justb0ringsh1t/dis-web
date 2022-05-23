@@ -10,9 +10,7 @@ $(() => {
       $vectorA.val().replaceAll(' ', '').length === 0 ||
       $vectorB.val().replaceAll(' ', '').length === 0
     ) {
-      $resultado.html(
-        '<span style="color:red">Complete todos los campos</span>'
-      );
+      $resultado.html('<span>Complete todos los campos</span>');
       return;
     }
 
@@ -21,7 +19,7 @@ $(() => {
 
     if (vectorA.length !== vectorB.length) {
       $resultado.html(
-        '<span style="color:red">Los Vectores tienen que tener el mismo tamaño</span>'
+        '<span >Los Vectores tienen que tener el mismo tamaño</span>'
       );
       return;
     }
