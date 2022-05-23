@@ -2,4 +2,58 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  max-width: 30rem;
+  overflow-wrap: break-word;
+}
+
+/* form */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: clamp(10rem, 20rem, 30rem);
+  padding: 2rem 1rem;
+  outline: 1px solid rgb(180, 180, 180);
+  box-shadow: 0 0 1.5rem 0.05rem rgba(0, 0, 0, 0.15);
+}
+
+form > *:not(button) + button {
+  margin-top: 1.25rem;
+}
+
+/* input */
+
+label {
+  font-weight: 600;
+}
+
+input {
+  font-size: 0.75rem;
+  padding: 0.35rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+form > input + small {
+  margin-top: -0.35rem;
+  font-size: 0.5rem;
+}
+
+/* resultado */
+
+#resultado {
+  margin-block: 1rem;
+  max-width: 90%;
+}
+
+#resultado > span {
+  color: red;
 }
