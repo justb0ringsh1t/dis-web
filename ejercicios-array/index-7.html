@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 7</title>
+    <link rel="stylesheet" href="../_global/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <form>
+        <label for="cedula">Ingrese la cedula:</label>
+        <input type="text" id="cedula" />
+        <small>Ingrese la cedula sin puntos ni guiones</small>
+        <label for="nota">Ingrese el promedio final:</label>
+        <input type="number" id="nota" min="1" max="12" />
+        <small>Ingrese una nota entre el 1 y el 12</small>
+        <button type="button" id="boton">Confirmar</button>
+      </form>
+      <span id="error" style="color: red"></span>
+      <div style="display: flex">
+        <ul id="exonerados" style="color: green"></ul>
+        <ul id="reprobados" style="color: orangered"></ul>
+      </div>
+    </main>
+    <script src="../_global/jquery-3.6.0.min.js"></script>
+    <script src="js/script-7.js"></script>
+  </body>
+</html>

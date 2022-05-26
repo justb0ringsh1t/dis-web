@@ -14,6 +14,7 @@ main {
 /* form */
 
 form {
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
