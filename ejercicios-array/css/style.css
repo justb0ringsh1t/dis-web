@@ -14,11 +14,11 @@ main {
 /* form */
 
 form {
-  margin-inline: auto;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   width: clamp(10rem, 20rem, 30rem);
+  margin-inline: auto;
   padding: 2rem 1rem;
   outline: 1px solid rgb(180, 180, 180);
   box-shadow: 0 0 1.5rem 0.05rem rgba(0, 0, 0, 0.15);
@@ -51,8 +51,9 @@ form > input + small {
 /* resultado */
 
 #resultado {
-  margin-block: 1rem;
+  margin: 1rem auto;
   max-width: 90%;
+  text-align: center;
 }
 
 #resultado > span {
