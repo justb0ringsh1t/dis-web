@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 1</title>
+    <link rel="stylesheet" href="../_global/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- form -->
+    <form>
+      <!-- input nombre -->
+      <label for="nombre">Ingrese el nombre:</label>
+      <input type="text" id="nombre" />
+      <small>No se puede repetir</small>
+
+      <!-- input contraseña -->
+      <label for="contra">Ingrese la contrasena:</label>
+      <input type="password" id="contra" />
+      <small>Minimo una mayuscula y un numero</small>
+
+      <!-- input saldo -->
+      <label for="saldo">Ingrese el saldo:</label>
+      <input type="number" id="saldo" min="0" />
+      <small>Tiene que ser mayor a 0</small>
+
+      <!-- boton -->
+      <button type="button" id="boton">Agregar</button>
+    </form>
+
+    <!-- resultado -->
+    <span style="color: red" id="error"></span>
+    <div style="display: flex" id="resultado">
+      <ul style="color: green" id="mayoresSaldos"></ul>
+      <ul style="color: red" id="sinSaldo"></ul>
+      <ul style="color: blue" id="usuarios"></ul>
+    </div>
+
+    <!-- script -->
+    <script src="../_global/jquery-3.6.0.min.js"></script>
+    <script src="js/script-1.js"></script>
+  </body>
+</html>
