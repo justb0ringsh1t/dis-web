@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="../_global/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      body {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      #resultado {
+        border-collapse: collapse;
+      }
+
+      #resultado,
+      #resultado th,
+      #resultado tr,
+      #resultado td {
+        border: 1px solid black;
+      }
+
+      #resultado th {
+        padding: 1em;
+      }
+      #resultado img {
+        border-radius: 500px;
+        aspect-ratio: 1;
+        width: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- form -->
+    <form>
+      <!-- input nombre -->
+      <label for="nombre">Ingrese un nombre:</label>
+      <input type="text" id="nombre" />
+
+      <!-- input imagen -->
+      <label for="imagen">Ingrese una imagen:</label>
+      <input type="file" id="imagen" />
+
+      <!-- boton -->
+      <button type="button" id="boton">Registrar</button>
+    </form>
+
+    <!-- resultado -->
+    <table id="resultado"></table>
+
+    <!-- script -->
+    <script src="../_global/jquery-3.6.0.min.js"></script>
+    <script src="js/script-2.js"></script>
+  </body>
+</html>
