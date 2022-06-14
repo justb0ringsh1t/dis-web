@@ -1,12 +1,12 @@
-$(function() {
-  const $resultado = $('#resultado');
-  const $alias = $('#alias');
+$(function () {
+  const $resultado = $('#resultado')
+  const $alias = $('#alias')
 
-  const listaAlias = [];
+  const listaAlias = []
 
-  $('#boton').on('click', function() {
-    const alias = $alias.val();
-    if (listaAlias.indexOf(alias) === -1) listaAlias.push(alias);
-    $resultado.html(`Array de alias = [${listaAlias.join(',')}]<br>`);
-  });
-});
+  $('#boton').on('click', function () {
+    const alias = $alias.val()
+    if (listaAlias.indexOf(alias) === -1) listaAlias.push(alias)
+    $resultado.html(`Array de alias = [${listaAlias.join(',')}]<br>`)
+  })
+})

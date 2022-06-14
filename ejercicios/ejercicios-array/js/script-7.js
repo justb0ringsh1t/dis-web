@@ -1,42 +1,42 @@
-$(function() {
-  const $error = $('#error');
-  const $exonerados = $('#exonerados');
-  const $reprobados = $('#reprobados');
-  const $cedula = $('#cedula');
-  const $nota = $('#nota');
+$(function () {
+  const $error = $('#error')
+  const $exonerados = $('#exonerados')
+  const $reprobados = $('#reprobados')
+  const $cedula = $('#cedula')
+  const $nota = $('#nota')
 
-  const libreta = [];
+  const libreta = []
 
-  $('#boton').on('click', function() {
+  $('#boton').on('click', function () {
     if (
       $cedula.val().replaceAll(' ', '').length === 0 ||
       $nota.val().replaceAll(' ', '').length === 0
     ) {
-      $error.html(`Ingrese los 2 valores`);
-      return;
+      $error.html(`Ingrese los 2 valores`)
+      return
     }
-    $error.html(``);
+    $error.html(``)
 
-    const cedula = $cedula.val();
-    const nota = Number($nota.val());
+    const cedula = $cedula.val()
+    const nota = Number($nota.val())
 
-    libreta.push(cedula, nota);
+    libreta.push(cedula, nota)
 
-    const exonerados = [];
-    const reprobados = [];
+    const exonerados = []
+    const reprobados = []
 
     for (let i = 0; i < libreta.length; i += 2) {
-      const cedula = libreta[i];
-      const nota = libreta[i + 1];
+      const cedula = libreta[i]
+      const nota = libreta[i + 1]
 
-      if (nota >= 8) exonerados.push(cedula, nota);
-      else reprobados.push(cedula, nota, definirPeriodo(nota));
+      if (nota >= 8) exonerados.push(cedula, nota)
+      else reprobados.push(cedula, nota, definirPeriodo(nota))
     }
 
-    $exonerados.html(``);
+    $exonerados.html(``)
     for (let i = 0; i < exonerados.length; i += 2) {
-      const cedula = exonerados[i];
-      const nota = exonerados[i + 1];
+      const cedula = exonerados[i]
+      const nota = exonerados[i + 1]
 
       $exonerados.append(`
       <ul>
@@ -45,14 +45,14 @@ $(function() {
           <li>Nota: ${nota}</li>
         </ul>
       </ul>
-      `);
+      `)
     }
 
-    $reprobados.html(``);
+    $reprobados.html(``)
     for (let i = 0; i < reprobados.length; i += 3) {
-      const cedula = reprobados[i];
-      const nota = reprobados[i + 1];
-      const juicio = reprobados[i + 2];
+      const cedula = reprobados[i]
+      const nota = reprobados[i + 1]
+      const juicio = reprobados[i + 2]
 
       $reprobados.append(`
       <ul>
@@ -62,11 +62,11 @@ $(function() {
           <li>Juicio: ${juicio}</li>
         </ul>
       </ul>
-      `);
+      `)
     }
-  });
+  })
 
   function definirPeriodo(nota) {
-    return nota >= 4 ? 'Diciembre' : 'Febrero';
+    return nota >= 4 ? 'Diciembre' : 'Febrero'
   }
-});
+})

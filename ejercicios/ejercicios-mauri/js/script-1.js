@@ -1,31 +1,31 @@
-'use strict';
+'use strict'
 
 $(() => {
-  const $resultado = $('#resultado');
-  const $enteros = $('#enteros');
+  const $resultado = $('#resultado')
+  const $enteros = $('#enteros')
 
   $('#boton-mostrar').on('click', () => {
     if ($enteros.val().replaceAll(' ', '').length === 0) {
-      $resultado.html('<span>Ingrese algo</span>');
-      return;
+      $resultado.html('<span>Ingrese algo</span>')
+      return
     }
 
-    const arrayEnteros = $enteros.val().split(',');
-    const arrayOrdenado = arrayEnteros.sort();
+    const arrayEnteros = $enteros.val().split(',')
+    const arrayOrdenado = arrayEnteros.sort()
 
-    const mayor = arrayOrdenado[arrayOrdenado.length - 1];
-    const menor = arrayOrdenado[0];
+    const mayor = arrayOrdenado[arrayOrdenado.length - 1]
+    const menor = arrayOrdenado[0]
 
-    let suma = 0;
-    arrayEnteros.forEach((a) => (suma += Number(a)));
-    const promedio = suma / arrayOrdenado.length;
+    let suma = 0
+    arrayEnteros.forEach(a => (suma += Number(a)))
+    const promedio = suma / arrayOrdenado.length
 
     $resultado.html(
-        `<ul>
+      `<ul>
         <li>Menor: ${menor}</li>
         <li>Mayor: ${mayor}</li>
         <li>Promedio: ${promedio}</li>
-      </ul>`,
-    );
-  });
-});
+      </ul>`
+    )
+  })
+})
