@@ -8,11 +8,6 @@
     <link rel="stylesheet" href="../_global/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <style>
-      body {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
       #resultado {
         border-collapse: collapse;
       }
@@ -22,15 +17,17 @@
       #resultado tr,
       #resultado td {
         border: 1px solid black;
+        align-content: center;
       }
 
       #resultado th {
         padding: 1em;
       }
       #resultado img {
+        margin-inline: auto;
         border-radius: 500px;
         aspect-ratio: 1;
-        width: 32px;
+        width: 64px;
       }
     </style>
   </head>
@@ -43,7 +40,7 @@
 
       <!-- input imagen -->
       <label for="imagen">Ingrese una imagen:</label>
-      <input type="file" id="imagen" />
+      <input type="file" id="imagen" accept=".png,.jpg,.jpeg" />
 
       <!-- boton -->
       <button type="button" id="boton">Registrar</button>
