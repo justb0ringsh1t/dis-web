@@ -1,8 +1,8 @@
-$(function () {
+$(function() {
   const $resultado = $('#resultado');
   const listaFrases = [];
 
-  $('#boton').on('click', function () {
+  $('#boton').on('click', function() {
     const frase = $('#frase').val() + '';
     listaFrases.push(frase);
 

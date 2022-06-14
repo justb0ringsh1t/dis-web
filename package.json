@@ -4,7 +4,8 @@
   "description": "",
   "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./ejercicios --ext .js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/justb0ringsh1t/ejercicios-utu/issues"
   },
-  "homepage": "https://github.com/justb0ringsh1t/ejercicios-utu#readme"
+  "homepage": "https://github.com/justb0ringsh1t/ejercicios-utu#readme",
+  "devDependencies": {
+    "eslint": "^8.17.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "prettier": "2.7.0"
+  }
 }

@@ -12,7 +12,7 @@ $(() => {
     const oracionReversa = oracion.split('').reverse().join('');
 
     $resultado.html(
-      `${oracion === oracionReversa ? 'Es palindromo' : 'No es palindromo'}`
+        `${oracion === oracionReversa ? 'Es palindromo' : 'No es palindromo'}`,
     );
   });
 });

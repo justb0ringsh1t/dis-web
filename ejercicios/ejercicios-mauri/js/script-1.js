@@ -21,11 +21,11 @@ $(() => {
     const promedio = suma / arrayOrdenado.length;
 
     $resultado.html(
-      `<ul>
+        `<ul>
         <li>Menor: ${menor}</li>
         <li>Mayor: ${mayor}</li>
         <li>Promedio: ${promedio}</li>
-      </ul>`
+      </ul>`,
     );
   });
 });

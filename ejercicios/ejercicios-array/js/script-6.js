@@ -1,10 +1,10 @@
-$(function () {
+$(function() {
   const $resultado = $('#resultado');
   const $texto = $('#texto');
 
   const listaTextos = [];
 
-  $('#boton').on('click', function () {
+  $('#boton').on('click', function() {
     const texto = $texto.val();
     listaTextos.push(texto);
 

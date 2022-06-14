@@ -15,9 +15,9 @@ $(() => {
     }
 
     const productoSolicitado = $producto
-      .val()
-      .replaceAll(' ', '')
-      .toLowerCase();
+        .val()
+        .replaceAll(' ', '')
+        .toLowerCase();
     let precio = `NO EXISTE ESE PRODUCTO`;
 
     for (const producto of PRODUCTOS) {

@@ -1,10 +1,10 @@
-$(function () {
+$(function() {
   const $resultado = $('#resultado');
   const $numero = $('#numero');
 
   const listaNumeros = [];
 
-  $('#boton').on('click', function () {
+  $('#boton').on('click', function() {
     const numero = Number($numero.val());
     listaNumeros.push(numero);
 
@@ -17,8 +17,9 @@ $(function () {
   function mayoresA20(numeros) {
     const numerosMayores20 = [];
 
-    for (const numero of numeros)
+    for (const numero of numeros) {
       if (numero > 20) numerosMayores20.push(numero);
+    }
     return numerosMayores20;
   }
 });

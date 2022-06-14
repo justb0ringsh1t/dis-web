@@ -15,8 +15,8 @@ $(function () {
       return
     }
 
-    let ultimoIndex = 0,
-      contador = 0
+    let ultimoIndex = 0
+    let contador = 0
 
     while (texto.indexOf(letra, ++ultimoIndex) !== -1) {
       ultimoIndex = texto.indexOf(letra, ultimoIndex)

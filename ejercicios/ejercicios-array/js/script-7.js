@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
   const $error = $('#error');
   const $exonerados = $('#exonerados');
   const $reprobados = $('#reprobados');
@@ -7,7 +7,7 @@ $(function () {
 
   const libreta = [];
 
-  $('#boton').on('click', function () {
+  $('#boton').on('click', function() {
     if (
       $cedula.val().replaceAll(' ', '').length === 0 ||
       $nota.val().replaceAll(' ', '').length === 0

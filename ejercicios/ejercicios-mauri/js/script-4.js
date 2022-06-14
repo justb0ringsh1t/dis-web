@@ -9,7 +9,7 @@ $(() => {
     }
 
     const vector = $vector.val().split(',').sort();
-    let vectorRepetidos = [];
+    const vectorRepetidos = [];
     let ultimoRepetido = vector[0];
 
     for (let i = 1; i <= vector.length; i++) {

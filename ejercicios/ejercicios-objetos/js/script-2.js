@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
   // inputs
   const $nombre = $('#nombre');
   const $imagen = $('#imagen');
@@ -9,7 +9,7 @@ $(function () {
   // listas
   const listaUsuarios = [];
 
-  $('#boton').on('click', function () {
+  $('#boton').on('click', function() {
     const nombre = $nombre.val();
     const ruta = $imagen.val();
     const rutaFinal = `img/${ruta.substr(ruta.lastIndexOf('\\') + 1)}`;
@@ -29,7 +29,7 @@ $(function () {
     this.nombre = _nombre;
     this.ruta = _ruta;
 
-    this.render = function () {
+    this.render = function() {
       return `
       <tr>
         <td>#${this.codigo}</td>

@@ -9,7 +9,7 @@ $(() => {
     }
 
     const numero = Number($numero.val());
-    let divisiores = [];
+    const divisiores = [];
 
     for (let i = 1; i <= Math.floor(numero / 2); i++) {
       if (numero % i === 0) divisiores.push(i);

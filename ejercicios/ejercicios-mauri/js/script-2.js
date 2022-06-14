@@ -19,12 +19,12 @@ $(() => {
 
     if (vectorA.length !== vectorB.length) {
       $resultado.html(
-        '<span >Los Vectores tienen que tener el mismo tamaño</span>'
+          '<span >Los Vectores tienen que tener el mismo tamaño</span>',
       );
       return;
     }
 
-    let vectorAB = [];
+    const vectorAB = [];
     let ia = 0;
     let ib = 0;
 
@@ -33,11 +33,11 @@ $(() => {
     }
 
     $resultado.html(
-      `<ul>
+        `<ul>
         <li>Vector A: [${vectorA.join(',')}]</li>
         <li>Vector B: [${vectorB.join(',')}]</li>
         <li>Resultado: [${vectorAB.join(',')}]</li>
-      <ul>`
+      <ul>`,
     );
   });
 });

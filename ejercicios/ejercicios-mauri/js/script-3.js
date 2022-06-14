@@ -10,7 +10,7 @@ $(() => {
 
     const numero = Number($numero.val());
 
-    let vector = [];
+    const vector = [];
     for (let i = numero; i > 0; i--) {
       vector.push(i);
     }
