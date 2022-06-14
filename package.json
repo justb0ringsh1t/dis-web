@@ -19,9 +19,9 @@
   },
   "homepage": "https://github.com/justb0ringsh1t/ejercicios-utu#readme",
   "devDependencies": {
-    "eslint": "^8.17.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-config-prettier": "^8.5.0",
+    "eslint": "8.17.0",
+    "eslint-config-google": "0.14.0",
+    "eslint-config-prettier": "8.5.0",
     "prettier": "2.7.0"
   }
 }
